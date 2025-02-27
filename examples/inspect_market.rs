@@ -1,13 +1,6 @@
 use hit_my_bet::state::PredictionMarket;
 use solana_client::nonblocking::rpc_client::RpcClient;
-use solana_sdk::pubkey::Pubkey;
-use solana_sdk::{
-  commitment_config::CommitmentConfig,
-  pubkey,
-  signature::Signer,
-};
-
-const PROGRAM_ID: Pubkey = hit_my_bet::ID;
+use solana_sdk::{commitment_config::CommitmentConfig, pubkey};
 
 #[tokio::main]
 async fn main() {
