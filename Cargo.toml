@@ -1,0 +1,38 @@
+[package]
+name = "hit-my-bet"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "=2.1.13"
+borsh = "=1.5.5"
+thiserror = "=1.0.65"
+
+[dev-dependencies]
+solana-sdk = "=2.1.13"
+solana-program-test = "=2.1.13"
+solana-client = "=2.1.13"
+tokio = { version = "=1.43.0", features = ["rt-multi-thread", "macros"] }
+
+[[example]]
+name = "create-market"
+path = "examples/create_market.rs"
+
+[[example]]
+name = "make-prediction"
+path = "examples/make_prediction.rs"
+
+[[example]]
+name = "resolve-market"
+path = "examples/resolve_market.rs"
+
+[[example]]
+name = "claim-market"
+path = "examples/claim_market.rs"
+
+[[example]]
+name = "inspect-market"
+path = "examples/inspect_market.rs"
